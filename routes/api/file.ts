@@ -1,5 +1,10 @@
 import {Handlers} from "$fresh/src/server/types.ts";
 
+/*
+    Ici c'est l'api /api/file qui renvoie des chunks de fichiers de 1024 * 1024 octets
+    C'est une response de type partial content code 206
+*/
+
 export const handler: Handlers = {
     async GET(req, ctx) {
         // Range header for chunk size
